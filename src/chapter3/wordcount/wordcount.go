@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	if len(os.Args) != 2 {
+		fmt.Fprintln(os.Stderr, "specify a single filename")
+		os.Exit(1)
+	}
 	filename := os.Args[1]
 
 	contents, err := ioutil.ReadFile(filename)
