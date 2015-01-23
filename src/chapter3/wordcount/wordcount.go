@@ -21,7 +21,6 @@ func main() {
 	}
 
 	text := string(contents)
-
 	count := words.CountWords(text)
-	fmt.Printf("There are %d words in your text. \n", count)
+	fmt.Printf("There are %d words in %s. \n", count, filename)
 }
