@@ -11,6 +11,11 @@ import (
 
 // main is the entry point for the application.
 func main() {
+
+	// check for correct command line arguments
+	if len(os.Args) < 3 {
+		log.Fatal("specify URL and destination filename")
+	}
 	// r here is a response, and r.Body is an io.Reader.
 	r, err := http.Get(os.Args[1])
 	if err != nil {
